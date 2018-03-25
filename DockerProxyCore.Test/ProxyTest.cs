@@ -24,7 +24,7 @@ namespace DockerProxyCore.Test
 		public void CreatePaymentRequest_Request200Successfull()
 		{
 			//given an example of payment request
-			string content =
+			var content =
 				"{ \"payeePaymentReference\": \"0123456789\", \"callbackUrl\": \"https://example.com/api/swishcb/paymentrequests\", \"payerAlias\": \"4671234768\", \"payeeAlias\": \"1231181189\", \"amount\": \"100\", \"currency\": \"SEK\", \"message\": \"Kingston USB Flash Drive 8 GB\" }";
 
 			// when submiting the request
@@ -32,7 +32,6 @@ namespace DockerProxyCore.Test
 
 			// 
 			Assert.IsTrue(response.IsSuccessStatusCode);
-
 		}
 	}
 }

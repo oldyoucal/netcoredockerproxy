@@ -8,42 +8,37 @@ using Microsoft.Extensions.DependencyInjection;
 namespace DockerProxyCore
 {
 	public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+	{
+		public Startup(IConfiguration configuration)
+		{
+			Configuration = configuration;
+		}
 
-        public IConfiguration Configuration { get; }
+		public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+		// This method gets called by the runtime. Use this method to add services to the container.
+		public void ConfigureServices(IServiceCollection services)
+		{
 			var col = new X509Certificate2Collection();
-	        var certificate = Configuration["CertificateName"];
-	        if (string.IsNullOrWhiteSpace(certificate))
-	        {
-		        throw new ArgumentException(certificate);
-	        }
-			col.Import(Configuration["CertificateName"] , Configuration["CertificatePassword"], X509KeyStorageFlags.DefaultKeySet);
+			col.Import(Configuration["CertificateName"], Configuration["CertificatePassword"],
+				X509KeyStorageFlags.DefaultKeySet);
 
 			using (var userIntermediateStore = new X509Store(StoreName.My, StoreLocation.CurrentUser, OpenFlags.ReadWrite))
 			{
 				userIntermediateStore.AddRange(col);
 			}
 			services.AddMvc();
-			services.Add(new ServiceDescriptor(typeof(AuthorizedRestClient), typeof(AuthorizedRestClient), ServiceLifetime.Singleton));
+			services.Add(new ServiceDescriptor(typeof(AuthorizedRestClient), typeof(AuthorizedRestClient),
+				ServiceLifetime.Singleton));
 		}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+		{
+			if (env.IsDevelopment())
+				app.UseDeveloperExceptionPage();
 
-            app.UseMvc();
-        }
-    }
+			app.UseMvc();
+		}
+	}
 }
