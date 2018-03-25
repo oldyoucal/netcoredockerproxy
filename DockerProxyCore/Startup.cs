@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,11 @@ namespace DockerProxyCore
         public void ConfigureServices(IServiceCollection services)
         {
 			var col = new X509Certificate2Collection();
+	        var certificate = Configuration["CertificateName"];
+	        if (string.IsNullOrWhiteSpace(certificate))
+	        {
+		        throw new ArgumentException(certificate);
+	        }
 			col.Import(Configuration["CertificateName"] , Configuration["CertificatePassword"], X509KeyStorageFlags.DefaultKeySet);
 
 			using (var userIntermediateStore = new X509Store(StoreName.My, StoreLocation.CurrentUser, OpenFlags.ReadWrite))
