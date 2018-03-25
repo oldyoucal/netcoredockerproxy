@@ -24,5 +24,11 @@ namespace DockerProxyCore.Controllers
 				return Ok(content);
 			return BadRequest("Invalid request");
 		}
+
+		[HttpGet]
+		public async Task<object> Get()
+		{
+			return Ok();
+		}
 	}
 }
