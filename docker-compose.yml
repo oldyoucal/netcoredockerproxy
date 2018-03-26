@@ -5,5 +5,4 @@ services:
     image: dockerproxycore
     build:
       context: .
-      dockerfile: DockerProxyCore/Dockerfile
-      
+      dockerfile: DockerProxyCore\Dockerfile

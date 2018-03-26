@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
+using System.Net.Security;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -25,9 +27,20 @@ namespace DockerProxyCore
 			{
 				var cert = certCollection[0];
 				_clientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
-				_clientHandler.SslProtocols = SslProtocols.Tls12;
+				_clientHandler.SslProtocols = SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12 ;
 				// disable this when using production certificate
-				_clientHandler.ServerCertificateCustomValidationCallback = (message, c, chain, errors) => { return true; };
+				_clientHandler.ServerCertificateCustomValidationCallback = (message, c, chain, errors) => {
+					const SslPolicyErrors unforgivableErrors =
+		  SslPolicyErrors.RemoteCertificateNotAvailable |
+		  SslPolicyErrors.RemoteCertificateNameMismatch;
+
+					if ((errors & unforgivableErrors) != 0)
+					{
+						return false;
+					}
+
+					return true;
+				};
 				_clientHandler.ClientCertificates.Add(cert);
 			}
 
