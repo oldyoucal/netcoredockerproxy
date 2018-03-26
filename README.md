@@ -10,6 +10,6 @@
 > docker ps
 - Get container's IP
 > docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [container ID]
-- Modify "BaseApiAddress" from appsettings.json within DockerProxyCore.Test with containers IP
+- Modify "BaseApiAddress" IP from appsettings.json within DockerProxyCore.Test with container's IP 
 - Run tests
 > dotnet test DockerProxyCore.Test 
