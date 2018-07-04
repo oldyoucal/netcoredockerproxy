@@ -1,0 +1,3 @@
+curl -v --request POST https://mss.swicpc.bankgirot.se/swish-cpcapi/api/v1/paymentrequests 
+
+cp TestSwishRootCAv1Test.crt /usr/local/share/ca-certificates/TestSwishRootCAv1Test.crt

@@ -1,0 +1,72 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:/C=SE/O=Bankgirocentralen BGC AB/CN=mss.swicpc.bankgirot.se
+   i:/C=SE/O=Getswish AB/OU=Infrastructure CA/CN=Test Swish TLS CA v1 Test
+ 1 s:/C=SE/O=Getswish AB/OU=Infrastructure CA/CN=Test Swish TLS CA v1 Test
+   i:/O=Getswish AB/OU=Swish Member Banks CA/CN=Test Swish Root CA v1 Test
+ 2 s:/O=Getswish AB/OU=Swish Member Banks CA/CN=Test Swish Root CA v1 Test
+   i:/O=Getswish AB/OU=Swish Member Banks CA/CN=Test Swish Root CA v1 Test
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIEsTCCApmgAwIBAgIIVvttMqai/X4wDQYJKoZIhvcNAQELBQAwYzELMAkGA1UE
+BhMCU0UxFDASBgNVBAoMC0dldHN3aXNoIEFCMRowGAYDVQQLDBFJbmZyYXN0cnVj
+dHVyZSBDQTEiMCAGA1UEAwwZVGVzdCBTd2lzaCBUTFMgQ0EgdjEgVGVzdDAeFw0x
+NzEwMTYyMjAwMDBaFw0xOTEwMTcyMTU5NTlaMFIxCzAJBgNVBAYTAlNFMSEwHwYD
+VQQKDBhCYW5rZ2lyb2NlbnRyYWxlbiBCR0MgQUIxIDAeBgNVBAMMF21zcy5zd2lj
+cGMuYmFua2dpcm90LnNlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+wrjFlRviIdm3Xk6tXgwgcJi14Ol6bclCmYyaMbzSE5m1goTvvcpE3RVpR6ZwDoL3
+XtXqaT8UKxDfEuH8cJT1n6Ulf0DwVXjfpdPwibjv64BI+oB9fN2TYARVzNmwqohP
+1DZ8HJEZn0nY+JGIQv1QRSnwhLCNFWs/3e6cVmU6HPX4amZnB/wPbWWe9hBJzw1K
+NMz4iaWcG8k//FXggexYILCG6jdN+GVq02wb5DFsuY7UTljGJ5SZ/XjqIWHeC8FC
+syk4oN8tRfrvekYLs8aIJQHvIFCwebGmi4lRlgeu97493++HtOie9T+8Ff+5FhyD
+hmWsGHz0ns2cXVHsFxReAwIDAQABo3oweDARBgNVHSAECjAIMAYGBCoDBAYwEwYD
+VR0lBAwwCgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMB0GA1UdDgQWBBSvEyEO
+Hi8hjlg1Gs9SEbfmhi7mYzAfBgNVHSMEGDAWgBQWVkwjfX52O3OO6gVCJ2t/LU57
+kzANBgkqhkiG9w0BAQsFAAOCAgEAO/Wsw5vH3YMIiRIfhs7CUiLEnTv3CoIINP6k
+S0RvchtKXIgFM9V3pG+qi9YmEL2qVKs5L/LJjval/0ntWLP+UCmFwhXebuNMJ6jT
+QYM13RxLvvFlG0Sf8JojLteOPfzly0g4ftBBx6uwN5jg8rWtov330Q307lq2hMDu
+h05GS6KCxcfB/ZOsWZWy4Z5k3OmLj4oUZIKOEfGb4XkwCLXoO4URMv5295BxWghu
+LSv4Hb4uyPK6cKYCMYrzk7YK7TEECkHQO2uytIPi0TfY/k/0KxxFXSV2Xpe9ENHP
+TOxRO3etmNOqffmcwd9u3IAICqukqrcac5X/AVpBxRXep+CcBlS9Q27m/4v4ZXCh
+Q56DP/0BBXP/U7tZB9JIgyCDcmJcm89rYQCX0tHV862s6LlEuXvw0k+LgQVM08Lw
+/PlAx2sS7zafuGw5YzTiP8HlXP7uPoFrJkjGWhrev3Z4s0Tk8wkFzZR7zDlXS0P8
+7ViFOM+3YXUFXpMW3tgN0X9DehReoz8kq4ktKLyI1nJArTkUV+gLG8wZ09pHkliT
+lFHMdeYeI2ePQY4lBQtN/ItGAX1H5/xwP8fVXKOyM4DYo46/pLl9NhWiaqgNJxcl
+IksO9ceOhZcwdPqUL0nLbSIjYlakZAXent+1iz9J4uVTnGm7QW+nTY1pJL5ucvLW
+B+YZMeg=
+-----END CERTIFICATE-----
+subject=/C=SE/O=Bankgirocentralen BGC AB/CN=mss.swicpc.bankgirot.se
+issuer=/C=SE/O=Getswish AB/OU=Infrastructure CA/CN=Test Swish TLS CA v1 Test
+---
+No client certificate CA names sent
+Client Certificate Types: RSA sign, DSA sign, ECDSA sign
+Requested Signature Algorithms: RSA+SHA256:DSA+SHA256:ECDSA+SHA256:RSA+SHA384:DSA+SHA384:ECDSA+SHA384:RSA+SHA512:DSA+SHA512:ECDSA+SHA512:RSA+SHA1:DSA+SHA1:ECDSA+SHA1
+Shared Requested Signature Algorithms: RSA+SHA256:DSA+SHA256:ECDSA+SHA256:RSA+SHA384:DSA+SHA384:ECDSA+SHA384:RSA+SHA512:DSA+SHA512:ECDSA+SHA512:RSA+SHA1:DSA+SHA1:ECDSA+SHA1
+Peer signing digest: SHA256
+Server Temp Key: DH, 1024 bits
+---
+SSL handshake has read 4825 bytes and written 378 bytes
+Verification error: self signed certificate in certificate chain
+---
+New, TLSv1.2, Cipher is DHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : DHE-RSA-AES256-GCM-SHA384
+    Session-ID: 8E94F18FA3992533F7DC7B378A614C3B8A7B4D05FD1281DA5F5E2F7D5AF19C4B
+    Session-ID-ctx: 
+    Master-Key: 77F34BA1E5F1D70F3508CB436F4CC153B30DE115B68E893CC56CD25D7392AD3308182492B72E404C2553A423925B62CE
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    Start Time: 1523000716
+    Timeout   : 7200 (sec)
+    Verify return code: 19 (self signed certificate in certificate chain)
+    Extended master secret: no
+---
