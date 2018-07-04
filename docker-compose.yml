@@ -1,8 +1,9 @@
-version: '3'
+version: '3.4'
 
 services:
   dockerproxycore:
     image: dockerproxycore
     build:
       context: .
-      dockerfile: DockerProxyCore\Dockerfile
+      dockerfile: DockerProxyCore/Dockerfile
+        
